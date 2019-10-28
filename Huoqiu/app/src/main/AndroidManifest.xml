@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lsl.huoqiu" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/study_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".AppContext"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activity.ui.MultiViewPagerActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ui.MainActivity"></activity>
+        <activity android:name=".activity.UIActivity"></activity>
+        <activity android:name=".activity.ui.HuoQiuProgressActivity"></activity>
+        <activity android:name=".activity.ui.HuoQiuMainActivity"></activity>
+        <activity android:name=".activity.ui.FengActivity"></activity>
+        <activity android:name=".activity.ui.VerticalViewPagerActivity"></activity>
+        <activity android:name=".activity.ui.GussActivity"></activity>
+        <activity android:name=".activity.ui.GussLayoutActivity"></activity>
+        <activity android:name=".activity.ui.PullZoomActivity"></activity>
+        <activity android:name=".activity.ui.HqPlanRoundActivity"></activity>
+        <!--<activity android:name=".activity.ui.MultiViewPagerActivity"></activity>-->
+        <activity android:name=".activity.ui.HqDialogActivity"></activity>
+        <activity android:name=".activity.ui.HqTextActivity"></activity>
+        <activity android:name=".activity.ui.AutoDrawable"></activity>
+        <activity android:name=".activity.ui.StructDetaliProgressActivity"></activity>
+        <activity android:name=".activity.FunctionActivity"></activity>
+        <activity android:name=".activity.function.AlarmActivity"></activity>
+        <activity android:name=".activity.function.OKHttpActivity"></activity>
+        <activity android:name=".game.GameActivity"></activity>
+        <activity android:name=".game.model.SingleGameActivity"></activity>
+        <activity android:name=".activity.TestActivity"></activity>
+        <activity android:name=".activity.GameDemoActivity"></activity>
+        <activity android:name=".activity.ui.PercentViewActivity" android:hardwareAccelerated="false"></activity>
+        <activity android:name=".activity.ui.LineChartViewActivity" android:hardwareAccelerated="false"></activity>
+        <activity android:name=".activity.ui.StructorActivity" android:hardwareAccelerated="false"></activity>
+        <activity android:name=".activity.ui.NewMineActivity" android:hardwareAccelerated="false"></activity>
+        <activity android:name=".activity.ui.PagerSlidingTabActivity" android:hardwareAccelerated="false"></activity>
+
+        <!-- 广播接收器-->
+        <receiver android:name=".receiver.PushReceiver"></receiver>
+        <receiver android:name=".receiver.PushDeleteReceiver"></receiver>
+        <receiver android:name=".receiver.PushHandleReceiver"></receiver>
+        <receiver android:name=".receiver.MyBroadCastReceiver">
+            <intent-filter>
+                <action android:name="com.lsl.huoqiu.test"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 发送短信-->
+    <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
+    <!-- 阅读消息 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <!-- 写入消息 -->
+    <!-- <uses-permission android:name="android.permission.WRITE_SMS" /> -->
+    <!-- 接收消息 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- 开启传感器 -->
+    <uses-permission android:name="android.hardware.sensor.accelerometer"/>
+    <!-- 开启震动-->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+</manifest>
